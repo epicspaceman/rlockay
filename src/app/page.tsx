@@ -1,95 +1,31 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import styles from "@/app/page.module.css";
+import Title from "@/components/Title/title";
+import Card from "@/components/card/card";
+import InlineLink from "@/components/Inline Link/inlinelink";
+import Link from 'next/link';
+import PhotoCard from "@/components/Photo Card/photocard";
+import fallsPhoto from '@/assets/photography/fallsman-1.jpg';
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
+      <Title text="robert lockay"/>
+      <div className={styles.body}>
+        is a computer science student at akins high school. i like programming full stack, <InlineLink text="taking photos" link='/photography'/> and being outside.
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      <h2 className={styles.header}>projects</h2>
+      <Card 
+        title='mtn' 
+        body='cli utility for sorting image files based on exif metadata. built in rust.' 
+        link='https://github.com/epicspaceman/mtn'
+      />
+      <h2 className={styles.header}>experience</h2>
+      <Card 
+        title='atlassian' 
+        subheader='summer internship 2024'
+        body='increased the branch limit from 150 -> 1000 for automation for confluence.' 
+        link='https://community.atlassian.com/t5/Confluence-articles/Increased-Branch-Limits-in-Automation-for-Confluence-150-gt-1/ba-p/2766294'
+      />
     </main>
   );
 }
