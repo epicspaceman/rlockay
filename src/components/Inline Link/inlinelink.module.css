@@ -1,0 +1,11 @@
+.textContainer {
+    color: black;
+    text-decoration-thickness: .175rem;
+    max-width: fit-content;
+    max-height: fit-content;
+}
+
+.textContainer:hover {
+    color: var(--main-color);
+    text-decoration: none;
+}

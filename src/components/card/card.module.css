@@ -1,0 +1,56 @@
+.container {
+    max-height: 12rem;
+    min-height: fit-content;
+    width: 12rem;
+    border-radius: 24px;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    color: black;
+    text-decoration: none;
+}
+
+.container:hover .title, .container:hover .body, .container:hover .subheader {
+    color: rgb(255, 183, 197);
+}
+
+.container:hover .title {
+    text-decoration-color: rgba(255, 183, 197, 0.8);
+}
+
+.title {
+    font-size: 1.5em;
+    text-decoration: rgba(0, 0, 0, 0.8) underline;
+    text-decoration-thickness: .175rem;
+}
+
+.body {
+    opacity: .8;
+}
+
+.cherryImage {
+    opacity: 0;
+    animation: rotate 50s linear infinite;
+    position: absolute;
+    z-index: -1;
+}
+
+.container:hover .cherryImage {
+    opacity: .3;
+}
+
+@keyframes rotate {
+    0% {
+        rotate: 360deg;
+    }
+
+    100% {
+        rotate: 0deg;
+    }
+}
+
+.subheader {
+    font-size: 0.9em;
+    opacity: .75;
+}
