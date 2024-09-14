@@ -6,6 +6,7 @@ import Link from 'next/link';
 import graffittiImage from '@/assets/photography/graffittiman-1.jpg';
 
 import * as fs from 'fs';
+import InlineLink from '@/components/Inline Link/inlinelink';
 
 const Photography = () => {
 
@@ -22,10 +23,8 @@ const Photography = () => {
 
     return(
         <main className={styles.main} id='photos-page-root'>
-            <div className={styles.titleContainer}>
-                <Link href='/' className={styles.link}>rl</Link>
-                <Title text='.photography'/>
-            </div>
+            <Title text='photography'/>
+            <p className={styles.link}><InlineLink href='/' text='home'/></p>
             <div className={styles.photoCards} id='photocard-container'>
                 {photos}
             </div>

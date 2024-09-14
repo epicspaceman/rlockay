@@ -10,37 +10,18 @@
 }
 
 .photoCards {
+    --max-rows: 3;
     width: 65%;
     display: grid;
     place-items: center;
-    grid-template-columns: 33.333% 33.333% 33.333%; 
+    grid-template-columns: repeat(auto-fill, minmax(max(30em, 100%/var(--max-rows)), 1fr));; 
 }
 
-.titleContainer {
-    display: flex;
-    flex-direction: row;
-}
 
 .link {
     color: black;
-    font-size: 6em;
-    font-weight: 900;
     max-width: fit-content;
     max-height: fit-content;
-    background-clip: text;
-    font-family: "Nunito", sans-serif;
-    text-decoration: none;
-    
-    &:hover {
-        color: transparent;
-        background-color: rgb(255, 183, 197);
-        text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);  
-    }
-}
-
-.skeletonCard {
-    max-width: 30em;
-    max-height: 20em;
-    border-color: var(--main-color);
+    font-size: clamp(1em, 1.5vw, 1.5em);
 }
 
