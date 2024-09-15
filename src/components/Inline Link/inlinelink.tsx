@@ -10,9 +10,7 @@ type Props = {
 
 const InlineLink = ({ text, href }: Props) => {
     return(
-        <CherryFlow>
             <Link className={styles.textContainer} href={href}>{text}</Link>
-        </CherryFlow>
     )
 }
 
