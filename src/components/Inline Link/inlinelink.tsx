@@ -5,14 +5,12 @@ import Link from 'next/link'
 
 type Props = {
     text: string;
-    link: string;
+    href: string;
 }
 
-const InlineLink = ({ text, link }: Props) => {
+const InlineLink = ({ text, href }: Props) => {
     return(
-        <CherryFlow>
-            <Link className={styles.textContainer} href={link}>{text}</Link>
-        </CherryFlow>
+            <Link className={styles.textContainer} href={href}>{text}</Link>
     )
 }
 

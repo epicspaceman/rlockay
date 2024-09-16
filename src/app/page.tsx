@@ -11,7 +11,7 @@ export default function Home() {
     <main className={styles.main}>
       <Title text="robert lockay"/>
       <div className={styles.body}>
-        is a computer science student at akins high school. i like programming full stack, <InlineLink text="taking photos" link='/photography'/> and being outside.
+        is a computer science student at akins high school. i like programming full stack, <InlineLink text="taking photos" href='/photography'/> and being outside.
       </div>
       <h2 className={styles.header}>projects</h2>
       <Card 
