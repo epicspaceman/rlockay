@@ -2,10 +2,11 @@
     font-size: clamp(2em, 6vw, 6em);
     font-weight: 900;
     cursor: default;
-    max-width: fit-content;
-    max-height: fit-content;
+    width: fit-content;
+    height: fit-content;
     background-clip: text;
     font-family: "Nunito", sans-serif;
+    text-wrap: nowrap;
 
     &:hover {
         color: transparent;
