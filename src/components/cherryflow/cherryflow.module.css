@@ -1,9 +1,9 @@
 .flowContainer {
-    max-width: fit-content;
-    max-height: fit-content;
+    width: fit-content;
+    height: fit-content;
     display: inline;
     position: relative;
-    overflow: hidden;
+    overflow:visible;
 }
 
 .flow {
@@ -31,9 +31,9 @@
     background: radial-gradient(circle, transparent 60%, var(--bg-color) 100%);
     z-index: -1;
     position: absolute;
-    left: 0;
+    left: -1%;
     top: 0;
-    width: 100%;
+    width: 102%;
     height: 100%;
     opacity: 0;
 }
