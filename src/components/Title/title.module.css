@@ -1,5 +1,4 @@
 .titleText {
-    font-size: clamp(2em, 6vw, 6em);
     font-weight: 900;
     cursor: default;
     width: fit-content;

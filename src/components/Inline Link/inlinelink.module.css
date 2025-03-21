@@ -7,5 +7,4 @@
 
 .textContainer:hover {
     color: var(--main-color);
-    text-decoration: none;
 }

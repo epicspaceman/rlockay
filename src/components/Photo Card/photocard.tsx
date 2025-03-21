@@ -23,7 +23,9 @@ const PhotoCard = ({ src, alt }: Props) => {
                 src={src}
                 alt={alt}
                 className={styles.image}
-
+                sizes='100vw'
+                width={0}
+                height={0}
                 />
             </div>
         );
@@ -36,6 +38,9 @@ const PhotoCard = ({ src, alt }: Props) => {
                 src={src}
                 alt={alt}
                 className={styles.image}
+                sizes='30em'
+                width={0}
+                height={0}
                 />
                 <Image 
                 className={styles.cherryImage}

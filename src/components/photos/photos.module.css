@@ -1,0 +1,7 @@
+.photoCards {
+    --max-rows: 3;
+    width: 65%;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(max(30em, 100%/var(--max-rows)), 1fr));; 
+}

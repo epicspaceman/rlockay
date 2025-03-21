@@ -8,8 +8,8 @@ type Props = {
 const CherryFlow = ({ children }: Props) => {
     return (
         <div className={styles.flowContainer}>
-            <div className={styles.flow}></div>
-            <div className={styles.flowOverlay}></div>
+            <div className={styles.flow} />
+            <div className={styles.flowOverlay} />
             {children}
         </div>
     )
