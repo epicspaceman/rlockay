@@ -28,8 +28,8 @@
 }
 
 .imageContainer .image {
-    max-width: 30em;
-    max-height: 20em;
+    width: 100%;
+    height: auto;
 }
 
 .enlargedImageContainer {
@@ -46,7 +46,17 @@
 }
 
 .enlargedImageContainer .image {
-    max-width: 90em;
-    max-height: 60em;
+    width: 75%;
+    height: auto;
+    animation: fade .1s linear;
 }
 
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

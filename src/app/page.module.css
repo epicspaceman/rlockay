@@ -1,31 +1,23 @@
 .main {
-  position: absolute;
-  width: 33.333%;
+  width: 75vw;
+  height: 100vh;
   display: flex;
-  top: 35%;
-  left: 33.333%;
-  justify-content: center;
   flex-direction: column;
   gap: 1em;
   color: black;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
 }
 
-.body {
-  font-size: clamp(1em, 1.5vw, 1.5em);
+.title {
+  font-size: clamp(1em, 5vw, 10em);
 }
 
-.header {
-  font-size: clamp(1.2em 1.8vw, 1.8em);
-  color: black;
-}
-
-.headerLink {
-  font-size: 1.8em;
-  color: black;
-  font-weight: 700;
-  text-decoration-thickness: .175rem;
-
-  &:hover {
-    color: var(--main-color);
-  }
+.links {
+  display: flex;
+  flex-direction: row;
+  font-size: clamp(1em, 2vw, 2em);
+  width: 100%;
+  justify-content: space-around;
 }
