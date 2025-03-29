@@ -6,8 +6,6 @@ import PhotoCard from "../Photo Card/photocard"
 import styles from '@/components/photos/photos.module.css'
 
 const Photos = () => {
-    const queryClient = useQueryClient()
-
     const fetchPhotos = () => fetch('api/photos', {
         method: 'GET'
     })
@@ -32,7 +30,7 @@ const Photos = () => {
 
     return (
         <div className={styles.photoCards}>
-            {data?.map((blob: PutBlobResult, idx: number) => <PhotoCard key={blob.pathname} src={blob.url} alt={blob.pathname}/>)}
+            {data?.map((blob: PutBlobResult) => <PhotoCard key={blob.pathname} src={blob.url} alt={blob.pathname}/>)}
         </div>
     )
 }
