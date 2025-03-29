@@ -14,23 +14,6 @@ const PhotoCard = ({ src, alt }: Props) => {
 
     let [showEnlarged, setShowEnglarged] = useState(false);
 
-    let enlargedImage = null;
-
-    if (showEnlarged) {
-        enlargedImage = (
-            <div className={styles.enlargedImageContainer} onClick={()=>setShowEnglarged(!showEnlarged)}>
-                <Image
-                src={src}
-                alt={alt}
-                className={styles.image}
-                sizes='100vw'
-                width={0}
-                height={0}
-                />
-            </div>
-        );
-    }
-
     return(
         <div>
             <div className={styles.imageContainer} onClick={()=>setShowEnglarged(!showEnlarged)}>
@@ -38,17 +21,26 @@ const PhotoCard = ({ src, alt }: Props) => {
                 src={src}
                 alt={alt}
                 className={styles.image}
-                sizes='30em'
+                sizes='100%'
                 width={0}
                 height={0}
                 />
-                <Image 
-                className={styles.cherryImage}
-                src={cherry}
-                alt="Cherry blossom"
-                />
+                <div className={styles.overlay}/>
             </div>
-            <div>{enlargedImage}</div>
+            <div>
+                {showEnlarged && (
+                <div className={styles.enlargedImageContainer} onClick={()=>setShowEnglarged(!showEnlarged)}>
+                    <Image
+                    src={src}
+                    alt={alt}
+                    className={styles.image}
+                    sizes='100vw'
+                    width={0}
+                    height={0}
+                    />
+                </div>
+                )}
+            </div>
         </div>
     )
 }

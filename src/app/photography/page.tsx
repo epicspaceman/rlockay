@@ -13,7 +13,6 @@ const Photography = () => {
 
     return(
         <main className={styles.main} id='photos-page-root'>
-            <Title text='photography'/>
             <p className={styles.link}>
             <InlineLink href='/'>home</InlineLink></p>
             <div className={styles.photoCards} id='photocard-container'>

@@ -1,6 +1,12 @@
 .main {
-  width: 75vw;
+  width: 100vw;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -19,5 +25,5 @@
   flex-direction: row;
   font-size: clamp(1em, 2vw, 2em);
   width: 100%;
-  justify-content: space-around;
+  justify-content: space-between;
 }

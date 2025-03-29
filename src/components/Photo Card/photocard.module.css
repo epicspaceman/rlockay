@@ -1,35 +1,19 @@
 .imageContainer {
-    max-width: fit-content;
-    max-height: fit-content;
-    margin: 1em;
+    justify-items: center;
+    transition: none;
 
-}
-
-.imageContainer:hover .cherryImage {
-    opacity: .5;
-}
-
-.cherryImage {
-    opacity: 0;
-    animation: rotate 50s linear infinite;
-    position: absolute;
-    width: 10em;
-    translate: 100% -170%;
-}
-
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
 }
 
 .imageContainer .image {
-    width: 100%;
     height: auto;
+    width: auto;
+    border-radius: .25em;
+    transition: .15s;
+}
+
+.imageContainer:hover .image {
+    cursor: grab;
+    border-radius: 7.5em;
 }
 
 .enlargedImageContainer {
@@ -43,10 +27,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor:grab;
 }
 
 .enlargedImageContainer .image {
-    width: 75%;
+    width: 80%;
     height: auto;
     animation: fade .1s linear;
 }
