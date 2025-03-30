@@ -7,3 +7,31 @@
     margin-top: .5em;
     margin-bottom: .5em;
 }
+
+.loading {
+    position: absolute;
+    top: 0;
+    left: 0;  
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    background-color: white;
+    align-content: center;
+    justify-items: center;
+    font-size: xx-large;
+}
+
+.blossom {
+    animation: spin 3s linear infinite;
+    opacity: .8;
+}
+
+@keyframes spin {
+    0% {
+        rotate: 0deg;
+    }
+
+    100% {
+        rotate: 360deg;
+    }
+}

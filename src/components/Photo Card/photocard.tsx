@@ -24,6 +24,8 @@ const PhotoCard = ({ src, alt }: Props) => {
                 sizes='100%'
                 width={0}
                 height={0}
+                blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mOcXw8AAcMBIFDR+9UAAAAASUVORK5CYII="'
+                placeholder='blur'
                 />
                 <div className={styles.overlay}/>
             </div>
